@@ -6,7 +6,6 @@ function App() {
     <>
     <h2>Hello {name}</h2>
       <div className="blank">Lovely</div>
-      
       <nav>
         <li>Home</li>
         <li>About</li>

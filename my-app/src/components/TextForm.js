@@ -42,12 +42,12 @@ export default function TextForm(props) {
                 <div className="mb-3" >
                     <textarea className="form-control" id="my-box" rows="8" value={text} style={myStyle} ref={ref} onChange={handleOnChange}></textarea>
                 </div>
-                <button className="btn btn-success mx-2" onClick={handleUpClick}>Convert to Uppercase</button>
-                <button className="btn btn-success mx-2" onClick={handleDownClick}>Convert to lowercase</button>
-                <button className="btn btn-success mx-2" onClick={handleClearClick}>Clear</button>
-                <button className="btn btn-success mx-2 my-2" onClick={handleReverseClick}>Reverse</button>
-                <button className="btn btn-success mx-2 my-2" onClick={handleCopyText}>Copy Text</button>
-                <button className="btn btn-success mx-2 my-2" onClick={handleExtraSpace}>Remove Extra Spaces</button>
+                <button disabled={text.length===0} className="btn btn-success mx-2 my-1" onClick={handleUpClick}>Convert to Uppercase</button>
+                <button disabled={text.length===0} className="btn btn-success mx-2 my-1" onClick={handleDownClick}>Convert to lowercase</button>
+                <button disabled={text.length===0} className="btn btn-success mx-2 my-1" onClick={handleClearClick}>Clear</button>
+                <button disabled={text.length===0} className="btn btn-success mx-2 my-2" onClick={handleReverseClick}>Reverse</button>
+                <button disabled={text.length===0} className="btn btn-success mx-2 my-2" onClick={handleCopyText}>Copy Text</button>
+                <button disabled={text.length===0} className="btn btn-success mx-2 my-2" onClick={handleExtraSpace}>Remove Extra Spaces</button>
             </div>
             <div className="container my-3" style={myStyle}>
                 <h1>Your text summary</h1>
